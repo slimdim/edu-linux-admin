@@ -1,0 +1,26 @@
+# 1е задание
+ubuntu@ip-172-31-18-45:~$ vim hello-world.py
+ubuntu@ip-172-31-18-45:~$ cat hello-world.py 
+print('Hello world!')
+
+# 2е задание
+ubuntu@ip-172-31-18-45:~$ cat hello-world.py | wc -l
+1
+
+# 3е задание
+ubuntu@ip-172-31-18-45:~$ vim linear-reg.py
+ubuntu@ip-172-31-18-45:~$ cat linear-reg.py
+print('Linear regression')
+
+# 4е задание
+ubuntu@ip-172-31-18-45:~$ cat hello-world.py linear-reg.py > hello-linear.py
+ubuntu@ip-172-31-18-45:~$ ls
+hello-linear.py  hello-world.py  linear-reg.py
+ubuntu@ip-172-31-18-45:~$ cat hello-linear.py 
+print('Hello world!')
+print('Linear regression')
+
+# 5е задание
+# 1. убрать лишнюю пустую строку в файле: cat -s test.txt > new_test.txt
+# 2. пронумировать строки в файле: cat -n test.txt > new_test.txt
+# 3. сортировка значений из нескольких файлов cat test1 test2 test3 | sort > result
