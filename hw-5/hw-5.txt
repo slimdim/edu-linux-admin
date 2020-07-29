@@ -1,0 +1,30 @@
+# 1е здание + скриншот
+ubuntu@ip-172-31-18-45:~$ htop
+
+# 2е задание
+ubuntu@ip-172-31-18-45:~$ find . -type f -name "*.py"
+./counter.py
+./linear-reg.py
+./hello-world.py
+./hello-linear.py
+
+# 3е задание + скриншот
+ubuntu@ip-172-31-18-45:~$ python3 counter.py
+0
+1
+^Z
+[1]+  Stopped                 python3 counter.py
+ubuntu@ip-172-31-18-45:~$ jobs -l
+[1]+   969 Stopped                 python3 counter.py
+ubuntu@ip-172-31-18-45:~$ htop
+ubuntu@ip-172-31-18-45:~$ fg 1
+python3 counter.py
+2
+3
+4
+5
+6
+7
+8
+9
+10
