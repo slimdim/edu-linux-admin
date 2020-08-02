@@ -165,3 +165,189 @@ Encryption notice:
 Zip environment options:
              ZIP:  [none]
           ZIPOPT:  [none]
+
+##### 3е задание
+##### + скриншоты
+ubuntu@ip-172-31-18-45:~$ lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+loop0     7:0    0   18M  1 loop /snap/amazon-ssm-agent/1566
+loop1     7:1    0 28.1M  1 loop /snap/amazon-ssm-agent/2012
+loop2     7:2    0 96.5M  1 loop /snap/core/9436
+loop3     7:3    0   97M  1 loop /snap/core/9665
+loop4     7:4    0   55M  1 loop /snap/core18/1754
+loop5     7:5    0   55M  1 loop /snap/core18/1880
+loop6     7:6    0 69.3M  1 loop /snap/lxd/15457
+loop7     7:7    0 71.3M  1 loop /snap/lxd/16100
+xvda    202:0    0    8G  0 disk 
+└─xvda1 202:1    0    8G  0 part /
+xvdf    202:80   0    1G  0 disk 
+ubuntu@ip-172-31-18-45:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2297804   5751256  29% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+ubuntu@ip-172-31-18-45:~$ sudo file -s /dev/xvdf
+/dev/xvdf: data
+ubuntu@ip-172-31-18-45:~$ sudo mkfs -t xfs /dev/xvdf
+meta-data=/dev/xvdf              isize=512    agcount=4, agsize=65536 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1
+data     =                       bsize=4096   blocks=262144, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+ubuntu@ip-172-31-18-45:~$ sudo file -s /dev/xvdf
+/dev/xvdf: SGI XFS filesystem data (blksz 4096, inosz 512, v2 dirs)
+ubuntu@ip-172-31-18-45:~$ ls /
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+ubuntu@ip-172-31-18-45:~$ sudo mkdir /data
+ubuntu@ip-172-31-18-45:~$ ls /
+bin  boot  data  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+ubuntu@ip-172-31-18-45:~$ ls /data/
+ubuntu@ip-172-31-18-45:~$ sudo mount /dev/xvdf /data
+ubuntu@ip-172-31-18-45:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2297820   5751240  29% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+/dev/xvdf        1038336   40292    998044   4% /data
+ubuntu@ip-172-31-18-45:~$ cd /data/
+ubuntu@ip-172-31-18-45:/data$ sudo chmod o+w /data/
+ubuntu@ip-172-31-18-45:/data$ vim test.txt
+ubuntu@ip-172-31-18-45:/data$ cat test.txt 
+test
+ubuntu@ip-172-31-18-45:/data$ cd ~
+ubuntu@ip-172-31-18-45:~$ sudo umount /dev/xvdf 
+ubuntu@ip-172-31-18-45:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2540912   5508148  32% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     792     99420   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+
+ubuntu@ip-172-31-18-45:~$ exit
+logout
+Connection to ec2-18-191-136-82.us-east-2.compute.amazonaws.com closed.
+
+# переключаюсь на другой инстанс и монтирую диск
+ubuntu@ip-172-31-27-211:~$ lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+loop0     7:0    0   18M  1 loop /snap/amazon-ssm-agent/1566
+loop1     7:1    0 28.1M  1 loop /snap/amazon-ssm-agent/2012
+loop2     7:2    0 96.5M  1 loop /snap/core/9436
+loop3     7:3    0   97M  1 loop /snap/core/9665
+loop4     7:4    0   55M  1 loop /snap/core18/1754
+loop5     7:5    0   55M  1 loop /snap/core18/1880
+loop6     7:6    0 69.3M  1 loop /snap/lxd/15457
+loop7     7:7    0 71.3M  1 loop /snap/lxd/16100
+xvda    202:0    0    8G  0 disk 
+└─xvda1 202:1    0    8G  0 part /
+xvdf    202:80   0    1G  0 disk 
+ubuntu@ip-172-31-27-211:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2298328   5750732  29% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+ubuntu@ip-172-31-27-211:~$ sudo file -s /dev/xvdf
+/dev/xvdf: SGI XFS filesystem data (blksz 4096, inosz 512, v2 dirs)
+ubuntu@ip-172-31-27-211:~$ ls /
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+ubuntu@ip-172-31-27-211:~$ sudo mkdir /data/
+ubuntu@ip-172-31-27-211:~$ ls /
+bin  boot  data  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+ubuntu@ip-172-31-27-211:~$ ls /data/
+ubuntu@ip-172-31-27-211:~$ sudo mount /dev/xvdf /data/
+ubuntu@ip-172-31-27-211:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2298332   5750728  29% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+/dev/xvdf        1038336   40296    998040   4% /data
+ubuntu@ip-172-31-27-211:~$ cd /data
+ubuntu@ip-172-31-27-211:/data$ ls
+test.txt
+ubuntu@ip-172-31-27-211:/data$ nano test.txt 
+ubuntu@ip-172-31-27-211:/data$ cd ~
+ubuntu@ip-172-31-27-211:~$ sudo umount /dev/xvdf 
+ubuntu@ip-172-31-27-211:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2298344   5750716  29% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+ubuntu@ip-172-31-27-211:~$ exit
+logout
+Connection to ec2-3-135-244-205.us-east-2.compute.amazonaws.com closed.
