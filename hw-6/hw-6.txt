@@ -1,0 +1,353 @@
+##### подготовка к 1му и 2му заданиям
+####### установка пакета zip
+ubuntu@ip-172-31-18-45:~$ sudo apt install zip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 68 not upgraded.
+Need to get 336 kB of archives.
+After this operation, 1231 kB of additional disk space will be used.
+Do you want to continue? [Y/n] yes
+Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 unzip amd64 6.0-25ubuntu1 [169 kB]
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal/main amd64 zip amd64 3.0-11build1 [167 kB]
+......................
+
+####### проверка установки zip
+ubuntu@ip-172-31-18-45:~$ zip --version
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+Currently maintained by E. Gordon.  Please send bug reports to
+the authors using the web page at www.info-zip.org; see README for details.
+
+Latest sources and executables are at ftp://ftp.info-zip.org/pub/infozip,
+as of above date; see http://www.info-zip.org/ for other sites.
+
+Compiled with gcc 6.3.0 20170415 for Unix (Linux ELF).
+
+Zip special compilation options:
+	USE_EF_UT_TIME       (store Universal Time)
+	BZIP2_SUPPORT        (bzip2 library version 1.0.8, 13-Jul-2019)
+	    bzip2 code and library copyright (c) Julian R Seward
+	    (See the bzip2 license for terms of use)
+	SYMLINK_SUPPORT      (symbolic links supported)
+	LARGE_FILE_SUPPORT   (can read and write large files on file system)
+	ZIP64_SUPPORT        (use Zip64 to store large files in archives)
+	UNICODE_SUPPORT      (store and read UTF-8 Unicode paths)
+	STORE_UNIX_UIDs_GIDs (store UID/GID sizes/values using new extra field)
+	UIDGID_NOT_16BIT     (old Unix 16-bit UID/GID extra field not used)
+	[encryption, version 2.91 of 05 Jan 2007] (modified for Zip 3)
+
+Encryption notice:
+	The encryption code of this program is not copyrighted and is
+	put in the public domain.  It was originally written in Europe
+	and, to the best of our knowledge, can be freely distributed
+	in both source and object forms from any country, including
+	the USA under License Exception TSU of the U.S. Export
+	Administration Regulations (section 740.13(e)) of 6 June 2002.
+
+Zip environment options:
+             ZIP:  [none]
+          ZIPOPT:  [none]
+
+####### установка пакета pip3
+ubuntu@ip-172-31-18-45:~$ sudo apt install python3-pip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential cpp cpp-9 dpkg-dev fakeroot g++ g++-9 gcc gcc-9 gcc-9-base
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libatomic1 libbinutils libc-dev-bin libc6-dev libcc1-0
+  libcrypt-dev libctf-nobfd0 libctf0 libdpkg-perl libexpat1-dev libfakeroot libfile-fcntllock-perl libgcc-9-dev libgomp1 libisl22 libitm1 liblsan0
+  libmpc3 libpython3-dev libpython3.8 libpython3.8-dev libpython3.8-minimal libpython3.8-stdlib libquadmath0 libstdc++-9-dev libtsan0 libubsan1
+  linux-libc-dev make manpages-dev python-pip-whl python3-dev python3-wheel python3.8 python3.8-dev python3.8-minimal zlib1g-dev
+Suggested packages:
+  binutils-doc cpp-doc gcc-9-locales debian-keyring g++-multilib g++-9-multilib gcc-9-doc gcc-multilib autoconf automake libtool flex bison gdb
+  gcc-doc gcc-9-multilib glibc-doc bzr libstdc++-9-doc make-doc python3.8-venv python3.8-doc binfmt-support
+The following NEW packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu build-essential cpp cpp-9 dpkg-dev fakeroot g++ g++-9 gcc gcc-9 gcc-9-base
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libatomic1 libbinutils libc-dev-bin libc6-dev libcc1-0
+  libcrypt-dev libctf-nobfd0 libctf0 libdpkg-perl libexpat1-dev libfakeroot libfile-fcntllock-perl libgcc-9-dev libgomp1 libisl22 libitm1 liblsan0
+  libmpc3 libpython3-dev libpython3.8-dev libquadmath0 libstdc++-9-dev libtsan0 libubsan1 linux-libc-dev make manpages-dev python-pip-whl python3-dev
+  python3-pip python3-wheel python3.8-dev zlib1g-dev
+The following packages will be upgraded:
+  libpython3.8 libpython3.8-minimal libpython3.8-stdlib python3.8 python3.8-minimal
+5 upgraded, 50 newly installed, 0 to remove and 63 not upgraded.
+Need to get 53.0 MB of archives.
+After this operation, 200 MB of additional disk space will be used.
+Do you want to continue? [Y/n] yes
+Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8 amd64 3.8.2-1ubuntu1.2 [364 kB]
+Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8 amd64 3.8.2-1ubuntu1.2 [1620 kB]
+....................
+
+####### проверка установки pip3
+ubuntu@ip-172-31-18-45:~$ pip3 --version
+pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
+
+##### 1е задание
+##### в приложенном скриншоте
+
+##### 2е задание
+##### в приложенном скриншоте, а также проверка "перенесённых" пакетов
+
+# подключаюсь к новому инстансу
+MacBook-Pro-Dmitrij-2:linux_admin dmitriyfilippov$ ssh -i "aws_demo.pem" ubuntu@ec2-18-224-169-99.us-east-2.compute.amazonaws.com
+
+The authenticity of host 'ec2-18-224-169-99.us-east-2.compute.amazonaws.com (18.224.169.99)' can't be established.
+ECDSA key fingerprint is SHA256:BHs3k2N0siX7gitUm5JBg6Uz44YGTps1YiOlpPWWZf4.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2-18-224-169-99.us-east-2.compute.amazonaws.com,18.224.169.99' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 20.04 LTS (GNU/Linux 5.4.0-1018-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Aug  1 11:41:52 UTC 2020
+
+  System load:  0.12              Processes:             106
+  Usage of /:   28.5% of 7.69GB   Users logged in:       0
+  Memory usage: 19%               IPv4 address for eth0: 172.31.27.211
+  Swap usage:   0%
+
+ * "If you've been waiting for the perfect Kubernetes dev solution for
+   macOS, the wait is over. Learn how to install Microk8s on macOS."
+
+   https://www.techrepublic.com/article/how-to-install-microk8s-on-macos/
+
+67 updates can be installed immediately.
+9 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Sat Aug  1 10:48:43 2020 from 80.235.8.71
+
+# проверяю версию пакета pip3
+ubuntu@ip-172-31-27-211:~$ pip3 --version
+pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
+
+# проверяю версию пакета zip
+ubuntu@ip-172-31-27-211:~$ zip --version
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+Currently maintained by E. Gordon.  Please send bug reports to
+the authors using the web page at www.info-zip.org; see README for details.
+
+Latest sources and executables are at ftp://ftp.info-zip.org/pub/infozip,
+as of above date; see http://www.info-zip.org/ for other sites.
+
+Compiled with gcc 6.3.0 20170415 for Unix (Linux ELF).
+
+Zip special compilation options:
+	USE_EF_UT_TIME       (store Universal Time)
+	BZIP2_SUPPORT        (bzip2 library version 1.0.8, 13-Jul-2019)
+	    bzip2 code and library copyright (c) Julian R Seward
+	    (See the bzip2 license for terms of use)
+	SYMLINK_SUPPORT      (symbolic links supported)
+	LARGE_FILE_SUPPORT   (can read and write large files on file system)
+	ZIP64_SUPPORT        (use Zip64 to store large files in archives)
+	UNICODE_SUPPORT      (store and read UTF-8 Unicode paths)
+	STORE_UNIX_UIDs_GIDs (store UID/GID sizes/values using new extra field)
+	UIDGID_NOT_16BIT     (old Unix 16-bit UID/GID extra field not used)
+	[encryption, version 2.91 of 05 Jan 2007] (modified for Zip 3)
+
+Encryption notice:
+	The encryption code of this program is not copyrighted and is
+	put in the public domain.  It was originally written in Europe
+	and, to the best of our knowledge, can be freely distributed
+	in both source and object forms from any country, including
+	the USA under License Exception TSU of the U.S. Export
+	Administration Regulations (section 740.13(e)) of 6 June 2002.
+
+Zip environment options:
+             ZIP:  [none]
+          ZIPOPT:  [none]
+
+##### 3е задание
+##### + скриншоты
+ubuntu@ip-172-31-18-45:~$ lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+loop0     7:0    0   18M  1 loop /snap/amazon-ssm-agent/1566
+loop1     7:1    0 28.1M  1 loop /snap/amazon-ssm-agent/2012
+loop2     7:2    0 96.5M  1 loop /snap/core/9436
+loop3     7:3    0   97M  1 loop /snap/core/9665
+loop4     7:4    0   55M  1 loop /snap/core18/1754
+loop5     7:5    0   55M  1 loop /snap/core18/1880
+loop6     7:6    0 69.3M  1 loop /snap/lxd/15457
+loop7     7:7    0 71.3M  1 loop /snap/lxd/16100
+xvda    202:0    0    8G  0 disk 
+└─xvda1 202:1    0    8G  0 part /
+xvdf    202:80   0    1G  0 disk 
+ubuntu@ip-172-31-18-45:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2297804   5751256  29% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+ubuntu@ip-172-31-18-45:~$ sudo file -s /dev/xvdf
+/dev/xvdf: data
+ubuntu@ip-172-31-18-45:~$ sudo mkfs -t xfs /dev/xvdf
+meta-data=/dev/xvdf              isize=512    agcount=4, agsize=65536 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1
+data     =                       bsize=4096   blocks=262144, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+ubuntu@ip-172-31-18-45:~$ sudo file -s /dev/xvdf
+/dev/xvdf: SGI XFS filesystem data (blksz 4096, inosz 512, v2 dirs)
+ubuntu@ip-172-31-18-45:~$ ls /
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+ubuntu@ip-172-31-18-45:~$ sudo mkdir /data
+ubuntu@ip-172-31-18-45:~$ ls /
+bin  boot  data  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+ubuntu@ip-172-31-18-45:~$ ls /data/
+ubuntu@ip-172-31-18-45:~$ sudo mount /dev/xvdf /data
+ubuntu@ip-172-31-18-45:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2297820   5751240  29% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+/dev/xvdf        1038336   40292    998044   4% /data
+ubuntu@ip-172-31-18-45:~$ cd /data/
+ubuntu@ip-172-31-18-45:/data$ sudo chmod o+w /data/
+ubuntu@ip-172-31-18-45:/data$ vim test.txt
+ubuntu@ip-172-31-18-45:/data$ cat test.txt 
+test
+ubuntu@ip-172-31-18-45:/data$ cd ~
+ubuntu@ip-172-31-18-45:~$ sudo umount /dev/xvdf 
+ubuntu@ip-172-31-18-45:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2540912   5508148  32% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     792     99420   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+
+ubuntu@ip-172-31-18-45:~$ exit
+logout
+Connection to ec2-18-191-136-82.us-east-2.compute.amazonaws.com closed.
+
+# переключаюсь на другой инстанс и монтирую диск
+ubuntu@ip-172-31-27-211:~$ lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+loop0     7:0    0   18M  1 loop /snap/amazon-ssm-agent/1566
+loop1     7:1    0 28.1M  1 loop /snap/amazon-ssm-agent/2012
+loop2     7:2    0 96.5M  1 loop /snap/core/9436
+loop3     7:3    0   97M  1 loop /snap/core/9665
+loop4     7:4    0   55M  1 loop /snap/core18/1754
+loop5     7:5    0   55M  1 loop /snap/core18/1880
+loop6     7:6    0 69.3M  1 loop /snap/lxd/15457
+loop7     7:7    0 71.3M  1 loop /snap/lxd/16100
+xvda    202:0    0    8G  0 disk 
+└─xvda1 202:1    0    8G  0 part /
+xvdf    202:80   0    1G  0 disk 
+ubuntu@ip-172-31-27-211:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2298328   5750732  29% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+ubuntu@ip-172-31-27-211:~$ sudo file -s /dev/xvdf
+/dev/xvdf: SGI XFS filesystem data (blksz 4096, inosz 512, v2 dirs)
+ubuntu@ip-172-31-27-211:~$ ls /
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+ubuntu@ip-172-31-27-211:~$ sudo mkdir /data/
+ubuntu@ip-172-31-27-211:~$ ls /
+bin  boot  data  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+ubuntu@ip-172-31-27-211:~$ ls /data/
+ubuntu@ip-172-31-27-211:~$ sudo mount /dev/xvdf /data/
+ubuntu@ip-172-31-27-211:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2298332   5750728  29% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+/dev/xvdf        1038336   40296    998040   4% /data
+ubuntu@ip-172-31-27-211:~$ cd /data
+ubuntu@ip-172-31-27-211:/data$ ls
+test.txt
+ubuntu@ip-172-31-27-211:/data$ nano test.txt 
+ubuntu@ip-172-31-27-211:/data$ cd ~
+ubuntu@ip-172-31-27-211:~$ sudo umount /dev/xvdf 
+ubuntu@ip-172-31-27-211:~$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/root        8065444 2298344   5750716  29% /
+devtmpfs          496940       0    496940   0% /dev
+tmpfs             501052       0    501052   0% /dev/shm
+tmpfs             100212     780     99432   1% /run
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs             501052       0    501052   0% /sys/fs/cgroup
+/dev/loop0         18432   18432         0 100% /snap/amazon-ssm-agent/1566
+/dev/loop1         28800   28800         0 100% /snap/amazon-ssm-agent/2012
+/dev/loop2         98944   98944         0 100% /snap/core/9436
+/dev/loop3         99328   99328         0 100% /snap/core/9665
+/dev/loop4         56320   56320         0 100% /snap/core18/1754
+/dev/loop5         56320   56320         0 100% /snap/core18/1880
+/dev/loop6         71040   71040         0 100% /snap/lxd/15457
+/dev/loop7         73088   73088         0 100% /snap/lxd/16100
+tmpfs             100208       0    100208   0% /run/user/1000
+ubuntu@ip-172-31-27-211:~$ exit
+logout
+Connection to ec2-3-135-244-205.us-east-2.compute.amazonaws.com closed.
