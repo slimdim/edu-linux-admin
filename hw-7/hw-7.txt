@@ -1,0 +1,23 @@
+# 1е задание
+ubuntu@ip-172-31-18-45:~$ ls
+counter.py  hello-linear.py  hello-world.py  linear-reg.py  test-nums.py  testpy  type-sudo.py  type-vim.py
+ubuntu@ip-172-31-18-45:~$ ls | grep '^t.*\.py$'
+test-nums.py
+type-sudo.py
+type-vim.py
+
+# 2е задание
+ubuntu@ip-172-31-18-45:~$ cat *.py | grep 'print'
+    print(i)
+print('Hello world!')
+print('Linear regression')
+print('Hello sudo!')
+print('Linear regression')
+print('SUDO!')
+print('VIM!')
+
+# 3е задание
+ubuntu@ip-172-31-18-45:~$ uptime
+ 17:31:08 up 33 min,  1 user,  load average: 0.00, 0.00, 0.00
+ubuntu@ip-172-31-18-45:~$ uptime | sed 's/^.* up \+\(.\+\), \+[0-9]\+ \+user.*/\1/'
+33 min
